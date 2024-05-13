@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <title>Chart of SM Yousuf routine</title>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   </head>
+   <body>
+      <header>
+         <nav class="nav">
+         <ul>
+            <li id="sleep-link"><a ">sleep-time</a></li>
+            <li id="wake-link"><a >wake-up</a></li>
+            <li id="power-link"><a >Power-nap</a></li>
+            <li id="work-link"><a>Work-Rate</a></li>
+            <li id="health-link"><a >Health-Rate</a></li>
+            <li id="exercise-link"><a >exercise</a></li>
+         </ul>
+         <nav>
+      </header>
+      <!-- landing page  -->
+      <div class="content">
+         <div class="home-page" id="home-page">
+            <p>Statistics of Yousuf</p>
+            <img src="img/statistics.png"> 
+            </div>
+            <div id="sleep-div">
+                <canvas id="sleep" style="width: 400px; height: 300px;"></canvas>
+                <img src="img/sleep.jpg" alt="">
+            </div>
+            <div id="wake-up-div">
+                <canvas id="wake-up" style="width: 400px; height: 300px;"></canvas>
+                <img src="img/Wake-Up-Early.jpg" alt="">
+            </div>
+            <div id="power-nap-div">
+                <canvas id="power-nap" style="width: 400px; height: 300px;"></canvas>
+                <img src="img/Power-Naps.jpg" alt="">
+            </div>
+            <div id="work-rate-div">
+                <canvas id="work-rate" style="width: 400px; height: 300px;"></canvas>
+                <img src="img/wrok.webp" alt="">
+            </div>
+            <div id="health-rate-div">
+                <canvas id="health-rate" style="width: 400px; height: 300px;"></canvas>
+                <img src="img/Health.avif" alt="">
+            </div>
+            <div id="exercise-div">
+                <canvas id="exercice" style="width: 400px; height: 300px;"></canvas>
+                <img src="img/man-exercising-plank-push-up-1200x628-facebook.avif" alt="">
+            </div>
+            
+      </div>
+
+      <script src="main.js"></script>
+
+      <script src="sleep.js" >
+        // const labelsa = ['06.05.24', '07.05.24', '08.05.24', '09.05.24', '11.05.24'];
+        // const data = {
+        // labels: labelsa,
+        // datasets: [
+        // {
+        //     label: 'go bed',
+        //     data: [8.50, 9.20, 9.20, 9.40, 10.40],
+        //     borderColor: 'red',
+        //     backgroundColor: 'rgba(255, 0, 0, 0.5)',
+        //     yAxisID: 'y',
+        // },
+        // {
+        //     label: 'sleep',
+        //     data: [9.20, 9.40, 9.40, 10.00, 10.20],
+        //     borderColor: 'blue',
+        //     backgroundColor: 'rgba(0, 0, 255, 0.5)',
+        //     yAxisID: 'y1',
+        // }
+        // ]
+        // };
+        
+        // const configSleep = {
+        // type: 'line',
+        // data: data,
+        // options: {
+        // responsive: true,
+        // interaction: {
+        //     mode: 'index',
+        //     intersect: false,
+        // },
+        // stacked: false,
+        // plugins: {
+        //     title: {
+        //         display: true,
+        //         text: 'Chart.js Line Chart - Multi Axis'
+        //     }
+        // },
+        // scales: {
+        //     y: {
+        //         type: 'linear',
+        //         display: true,
+        //         position: 'left',
+        //     },
+        //     y1: {
+        //         type: 'linear',
+        //         display: true,
+        //         position: 'right',
+        //         grid: {
+        //             drawOnChartArea: false,
+        //         },
+        //     },
+        // }
+        // },
+        // };
+        
+        // const sleep = document.getElementById("sleep").getContext('2d');
+        // new Chart(sleep, configSleep);
+
+  
+        
+        
+     </script>
+
+     <!-- exercice -->
+      <script >
+         const ctx = document.getElementById("exercice");
+         new Chart(ctx, {
+             type: 'line',
+             data: {
+                 labels: ['06.05.24', '07.05.24', '08.05.24', '09.05.24', '11.05.24','12.05.24',],
+                 datasets: [
+                     {
+                         label: 'Exercise min',
+                         backgroundColor: '#F77D7E', 
+                         borderColor: 'red',
+                         data: [60, 50, 40, 45, 60,0],
+                         borderWidth: 2,
+                         fill: true 
+                     }
+                 ]
+             },
+             options: {
+                 scales: {
+                     y: {
+                         beginAtZero: true
+                     }
+                 }
+             }
+         });      
+         </script>
+
+         <!-- power nap  -->
+      <script>
+         const power = document.getElementById('power-nap');
+         
+         new Chart(power, {
+         type: 'line',
+         data: {
+         labels: ['06.05.24', '07.05.24', '08.05.24', '09.05.24', '11.05.24','12.05.24' ],
+         datasets: [{
+         label: 'power-nap',
+         data: [1.20, 1.10, 1, 0.5, 0.7 , 2],
+         borderWidth: 4,
+         backgroundColor: ['red', "blue", "yellow","green", "purple" , "orange"],
+         pointStyle: 'circle',
+         pointRadius: 10,
+         pointHoverRadius: 15
+         }]
+         },
+         options: {
+         responsive: true,
+         plugins: {
+         title: {
+         display: true,
+         // text: (ctx) => 'Point Style: ' + ctx.chart.data.datasets[0].pointStyle,
+         }
+         },
+         scales: {
+         y: {
+         beginAtZero: true
+         }
+         }
+         }
+         });
+      </script>
+    
+     <!-- wake-up -->
+      <script src="wake-up.js">
+ 
+      </script>
+
+      <!-- work -->
+      <script >
+         const day = ['06.05.24', '07.05.24', '08.05.24', '09.05.24', '10.05.24', '11.05.24' , '12.05.24'];
+         
+         const configWork = {
+         type: 'line',
+         data: {
+         labels: day, 
+         datasets: [{
+         label: 'work rate',
+         data: [6, 7, 6, NaN, 6, 8,7],
+         borderColor: 'rgb(75, 192, 192)',
+         segment: {
+         borderColor: function(ctx) {
+           return ctx.p0.skip || ctx.p1.skip ? 'rgb(0, 0, 0, 0.2)' : ctx.p0.parsed.y > ctx.p1.parsed.y ? 'rgb(192, 75, 75)' : undefined;
+         },
+         borderDash: function(ctx) {
+           return ctx.p0.skip || ctx.p1.skip ? [6, 6] : undefined;
+         },
+         },
+         spanGaps: true
+         }]
+         },
+         options: {
+         fill: false,
+         interaction: {
+         intersect: false
+         },
+         radius: 0,
+         }
+         };
+         
+         // Initialize the chart
+         const ctxWork = document.getElementById('work-rate').getContext('2d');
+         new Chart(ctxWork, configWork);
+      </script>
+
+      <!-- health -->
+      <script src="health.js"></script>
+     
+   </body>
+</html>
