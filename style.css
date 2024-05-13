@@ -54,11 +54,12 @@ a {
 a:hover {
     cursor: pointer;
     background: #e7e7e7;
+    color: #2b2929;
 }
 
 .active {
-  background-color: #696767;
-  color: #fff;
+    background: #e7e7e7;
+    color: #2b2929;
 }
 
 .content-container {
