@@ -59,7 +59,9 @@
          data: [5, 6, 8, 4, 8,2],
          borderWidth: 4,
          backgroundColor: ['red', "blue", "yellow","green", "purple"],
-         stepped: true, // Initial step interpolation
+         stepped: true,
+         borderColor: "#FF8A08",
+         // Initial step interpolation
        }
      ]
    };
