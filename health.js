@@ -56,7 +56,7 @@
      datasets: [
        {
          label: 'Health Rate',
-         data: [5, 6, 8, 4, 8,4],
+         data: [5, 6, 8, 4, 8,2],
          borderWidth: 4,
          backgroundColor: ['red', "blue", "yellow","green", "purple"],
          stepped: true, // Initial step interpolation
