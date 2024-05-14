@@ -52,15 +52,15 @@
    ];
 
    const data = {
-     labels: ['06.05.24', '07.05.24', '08.05.24', '09.05.24', '11.05.24', '12.05.24'],
+     labels: ['06.05', '07.05', '08.05', '09.05', '11.05', '12.05', '13.05'],
      datasets: [
        {
          label: 'Health Rate',
-         data: [5, 6, 8, 4, 8,2],
+         data: [5, 6, 8, 4, 8,2,6],
          borderWidth: 4,
          backgroundColor: ['red', "blue", "yellow","green", "purple"],
          stepped: true,
-         borderColor: "#FF8A08",
+         borderColor: "#169788",
          // Initial step interpolation
        }
      ]

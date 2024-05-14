@@ -1,17 +1,17 @@
-const labels = ['06.05.24', '07.05.24', '08.05.24', '09.05.24', '11.05.24', '12.05.24'];
+const labels = ['06.05', '07.05', '08.05', '09.05', '11.05', '12.05', '13.05', '14.05'];
 const data = {
     labels: labels,
     datasets: [
         {
             label: 'go bed',
-            data: [8.50, 9.20, 9.20, 9.40, 10.40, 9.40],
+            data: [8.50, 9.20, 9.20, 9.40, 10.40, 9.40,10.00,9.00],
             borderColor: 'red',
             backgroundColor: 'rgba(255, 0, 0, 0.5)',
             yAxisID: 'y',
         },
         {
             label: 'sleep',
-            data: [9.20, 9.40, 9.40, 10.00, 10.20,10.20],
+            data: [9.20, 9.40, 9.40, 10.00, 10.20,10.20,10.40,9.40],
             borderColor: 'blue',
             backgroundColor: 'rgba(0, 0, 255, 0.5)',
             yAxisID: 'y1',

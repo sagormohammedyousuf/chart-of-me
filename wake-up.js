@@ -3,10 +3,10 @@ const ctxWake = document.getElementById('wake-up');
 new Chart(ctxWake, {
   type: 'line',
   data: {
-    labels: ['06.05.24', '07.05.24', '08.05.24', '09.05.24', '11.05.24','12.05.24' ],
+    labels: ['06.05', '07.05', '08.05', '09.05', '11.05', '12.05', '13.05', '14.05' ],
     datasets: [{
       label: 'wake up time',
-      data: [4.4, 4.4, 5.10, 4.4, 5.20,4.20],
+      data: [4.4, 4.4, 5.10, 4.4, 5.20,4.40,4.40,4.35],
       borderWidth: 4,
       backgroundColor: ['red', "blue", "yellow","green", "purple" , "orange"],
     }]
