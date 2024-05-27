@@ -56,7 +56,7 @@
      datasets: [
        {
          label: 'Health Rate',
-         data: [5, 6, 8, 4, 8,2,6,5,6,4,6,6,5,6,6,5,4,6,2],
+         data: [5, 6, 8, 4, 8,2,6,5,6,4,6,6,5,6,6,5,4,6,2,6],
          borderWidth: 4,
          backgroundColor: ['red', "blue", "yellow","green", "purple"],
          stepped: true,

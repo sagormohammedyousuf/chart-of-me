@@ -30,9 +30,12 @@ const land = document.getElementById('land')
 
 const allLink = document.querySelectorAll('ul li a');
 
-sleepLink.addEventListener('click', () => {
 
-    land.style.background = "#D4DCF1"
+// for sleep //
+
+// Function to handle displaying the sleep section and updating the classes
+function showSleepSection() {
+    land.style.background = "#D4DCF1";
 
     sleep.style.display = 'flex';
     health.style.display = 'none';
@@ -42,20 +45,30 @@ sleepLink.addEventListener('click', () => {
     work.style.display = 'none';
     home.style.display = 'none';
 
-    
-
     sleepLink.classList.add('active');
     wakeLink.classList.remove('active');
     powerLink.classList.remove('active');
     healthLink.classList.remove('active');
     exerciseLink.classList.remove('active');
-    wakeLink.classList.remove('active');
+    workLink.classList.remove('active');
+}
 
+// Add click event listener to sleepLink
+sleepLink.addEventListener('click', showSleepSection);
 
-   
+// Add keydown event listener for Ctrl + D
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'd') {
+        event.preventDefault(); // Prevent the default action for Ctrl + D
+        showSleepSection();
+    }
 });
 
-wakeLink.addEventListener('click', () => {
+
+
+// for wake up //
+// Function to handle displaying the wake section and updating the classes
+function showWakeSection() {
     wakeUp.style.display = 'flex';
     health.style.display = 'none';
     sleep.style.display = 'none';
@@ -66,17 +79,29 @@ wakeLink.addEventListener('click', () => {
 
     wakeLink.classList.add('active');
 
-    
     sleepLink.classList.remove('active');
-    
     powerLink.classList.remove('active');
     healthLink.classList.remove('active');
     exerciseLink.classList.remove('active');
     workLink.classList.remove('active');
 
+    land.style.background = "#D4DCF1";
+}
 
-    land.style.background = "#D4DCF1"
+// Add click event listener to wakeLink
+wakeLink.addEventListener('click', showWakeSection);
+
+// Add keydown event listener for Ctrl + W
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'w') {
+        event.preventDefault(); // Prevent the default action for Ctrl + W
+        showWakeSection();
+    }
 });
+
+
+
+// for  powerlink 
 
 powerLink.addEventListener('click', () => {
     powerNap.style.display = 'flex';
@@ -175,9 +200,10 @@ exerciseLink.addEventListener('click', () => {
 
 
 
+// home section functionality //
 
 
-homeLink.addEventListener('click', () => {
+function showHomeSection() {
     exercise.style.display = 'none';
     health.style.display = 'none';
     sleep.style.display = 'none';
@@ -186,9 +212,6 @@ homeLink.addEventListener('click', () => {
     work.style.display = 'none';
     home.style.display = 'flex';
 
-
-
-    
     sleepLink.classList.remove('active');
     wakeLink.classList.remove('active');
     powerLink.classList.remove('active');
@@ -196,16 +219,31 @@ homeLink.addEventListener('click', () => {
     exerciseLink.classList.remove('active');
     workLink.classList.remove('active');
 
-    
-
     land.style.backgroundImage = "url('img/bar-chart-build.jpg')";
     land.style.backgroundSize = "100vw 100vh";
     land.style.backgroundRepeat = "no-repeat";
-    
-    
+}
+
+// Add click event listener to homeLink
+homeLink.addEventListener('click', showHomeSection);
+
+// Add keydown event listener for Ctrl + H
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'h') {
+        event.preventDefault(); 
+        showHomeSection();
+    }
 });
 
 
 
 
 
+// shortcut //
+
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'k') {
+        event.preventDefault(); // Prevent the default browser action (commonly the browser search function)
+        document.getElementById('searchBox').focus();
+    }
+});

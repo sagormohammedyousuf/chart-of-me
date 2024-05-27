@@ -10,11 +10,12 @@
    <body>
         <div class="land" id="land">
             <header>
-                <div>
+                <div class="nav-left">
                     <img class="logo" src="img/logo-for.png" alt="">
+                    
                 </div>
                 <nav class="nav">
-                    <ul>
+                <ul>
                    <li id="home-link"><a href="#home">Home</a></li>
                    <li id="sleep-link"><a href="#sleep-time">sleep-time</a></li>
                    <li id="wake-link"><a href="#wakeup">wake-up</a></li>
@@ -25,7 +26,14 @@
                 </ul>
                 <nav>
 
-             <div></div>
+             <div class="nav-right">
+                <div class="div-search">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#fff"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                    </button>
+                    <input type="search" id="searchBox" placeholder="search">
+                </div>
+             </div>
              </header>
              <!-- landing page  -->
              <div class="content">
@@ -35,27 +43,27 @@
                    </div>
                    <div id="sleep-div">
                        <canvas id="sleep" style="width: 400px; height: 300px;"></canvas>
-                       <img src="img/sleep.jpg" alt="">
+                       <img src="img/boy-is-in-deep-sleep-10704492-8627823.png" alt="sleep">
                    </div>
                    <div id="wake-up-div">
                        <canvas id="wake-up" style="width: 400px; height: 300px;"></canvas>
-                       <img src="img/Wake-Up-Early.jpg" alt="">
+                       <img src="img/wake-up.svg" alt="wake-up">
                    </div>
                    <div id="power-nap-div">
                        <canvas id="power-nap" style="width: 400px; height: 300px;"></canvas>
-                       <img src="img/Power-Naps.jpg" alt="">
+                       <img src="img/power-nap.svg" alt="power-nap">
                    </div>
                    <div id="work-rate-div">
                        <canvas id="work-rate" style="width: 400px; height: 300px;"></canvas>
-                       <img src="img/wrok.webp" alt="">
+                       <img src="img/work-.svg" alt="work">
                    </div>
                    <div id="health-rate-div">
                        <canvas id="health-rate" style="width: 400px; height: 300px;"></canvas>
-                       <img src="img/Health.avif" alt="">
+                       <img src="img/health.svg" alt="health">
                    </div>
                    <div id="exercise-div">
                        <canvas id="exercice" style="width: 400px; height: 300px;"></canvas>
-                       <img src="img/man-exercising-plank-push-up-1200x628-facebook.avif" alt="">
+                       <img src="img/exercise.svg" alt="exercice">
                    </div>
                    
              </div>
@@ -79,7 +87,7 @@
                          label: 'Exercise min',
                          backgroundColor: '#8B93FF', 
                          borderColor: '#1E0342',
-                         data: [60, 50, 40, 45, 60,0,30,30,60,0,0,30,40,40,50,0,0,0,20],
+                         data: [60, 50, 40, 45, 60,0,30,30,60,0,0,30,40,40,50,0,0,0,20,30],
                          borderWidth: 2,
                          fill: true 
                      }
@@ -105,7 +113,7 @@
          labels: ['06.05', '07.05', '08.05', '09.05', '11.05', '12.05', '13.05', '14.05' , '15.05', '16.05', '17.05' , '18.05', '19.05','20.05', '21.05', '22.05', '23.05', '24.05', '25.05', '26.05'],
          datasets: [{
          label: 'power-nap-min',
-         data: [80, 70, 60, 30, 40 , 180,6,90 ,60,80,60,90,60,3,65,65,90,240,120+240],
+         data: [80, 70, 60, 30, 40 , 180,6,90 ,60,80,60,90,60,3,65,65,90,240,120+240,30+60],
          borderWidth: 4,
          backgroundColor: ['red', "blue", "yellow","green", "purple" , "orange"],
          pointStyle: 'circle',
@@ -145,7 +153,7 @@
          labels: day, 
          datasets: [{
          label: 'work rate',
-         data: [6, 7, 6,  6 ,NaN, 8,5,8,5,7,7,5,7,5,7,6,5,4,NaN,2],
+         data: [6, 7, 6,  6 ,NaN, 8,5,8,5,7,7,5,7,5,7,6,5,4,NaN,2,5],
          borderColor: 'rgb(75, 192, 192)',
          segment: {
          borderColor: function(ctx) {
