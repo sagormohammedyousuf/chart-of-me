@@ -32,7 +32,7 @@ const config = {
         plugins: {
             title: {
                 display: true,
-                text: 'Chart.js Line Chart - Multi Axis'
+                text: 'Sleep time'
             }
         },
         scales: {

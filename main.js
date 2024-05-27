@@ -35,7 +35,7 @@ const allLink = document.querySelectorAll('ul li a');
 
 // Function to handle displaying the sleep section and updating the classes
 function showSleepSection() {
-    land.style.background = "#D4DCF1";
+    land.style.background = "#FFFFFF";
 
     sleep.style.display = 'flex';
     health.style.display = 'none';
@@ -59,7 +59,7 @@ sleepLink.addEventListener('click', showSleepSection);
 // Add keydown event listener for Ctrl + D
 document.addEventListener('keydown', function(event) {
     if (event.ctrlKey && event.key === 'd') {
-        event.preventDefault(); // Prevent the default action for Ctrl + D
+        event.preventDefault(); 
         showSleepSection();
     }
 });
@@ -85,7 +85,7 @@ function showWakeSection() {
     exerciseLink.classList.remove('active');
     workLink.classList.remove('active');
 
-    land.style.background = "#D4DCF1";
+    land.style.background = "#FFFFFF";
 }
 
 // Add click event listener to wakeLink
@@ -93,7 +93,7 @@ wakeLink.addEventListener('click', showWakeSection);
 
 // Add keydown event listener for Ctrl + W
 document.addEventListener('keydown', function(event) {
-    if (event.ctrlKey && event.key === 'w') {
+    if (event.ctrlKey && event.key === 'l') {
         event.preventDefault(); // Prevent the default action for Ctrl + W
         showWakeSection();
     }
@@ -101,9 +101,11 @@ document.addEventListener('keydown', function(event) {
 
 
 
-// for  powerlink 
+// for  powernap  
 
-powerLink.addEventListener('click', () => {
+
+// Function to handle displaying the power nap section and updating the classes
+function showPowerNapSection() {
     powerNap.style.display = 'flex';
     health.style.display = 'none';
     sleep.style.display = 'none';
@@ -113,20 +115,31 @@ powerLink.addEventListener('click', () => {
     home.style.display = 'none';
     powerLink.classList.add('active');
 
-    
     sleepLink.classList.remove('active');
     wakeLink.classList.remove('active');
-    // powerLink.classList.remove('active');
     healthLink.classList.remove('active');
     exerciseLink.classList.remove('active');
     workLink.classList.remove('active');
 
+    land.style.background = "#FFFFFF";
+}
 
-    land.style.background = "#D4DCF1"
+// Add click event listener to powerLink
+powerLink.addEventListener('click', showPowerNapSection);
 
+// Add keydown event listener for Ctrl + B
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key.toLowerCase() === 'b') {
+        event.preventDefault(); // Prevent the default action for Ctrl + B
+        showPowerNapSection();
+    }
 });
 
-workLink.addEventListener('click', () => {
+
+// for work rate 
+
+// Function to handle displaying the work section and updating the classes
+function showWorkSection() {
     work.style.display = 'flex';
     health.style.display = 'none';
     sleep.style.display = 'none';
@@ -135,23 +148,32 @@ workLink.addEventListener('click', () => {
     powerNap.style.display = 'none';
     home.style.display = 'none';
 
-
-
     workLink.classList.add('active');
 
-
-    
     sleepLink.classList.remove('active');
     wakeLink.classList.remove('active');
     powerLink.classList.remove('active');
     healthLink.classList.remove('active');
     exerciseLink.classList.remove('active');
 
-    land.style.background = "#D4DCF1"
-    
+    land.style.background = "#FFFFFF";
+}
+
+// Add click event listener to workLink
+workLink.addEventListener('click', showWorkSection);
+
+// Add keydown event listener for Ctrl + X
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key.toLowerCase() === 'x') {
+        event.preventDefault();
+        showWorkSection();
+    }
 });
 
-healthLink.addEventListener('click', () => {
+
+
+
+function showHealthSection() {
     health.style.display = 'flex';
     sleep.style.display = 'none';
     wakeUp.style.display = 'none';
@@ -159,21 +181,31 @@ healthLink.addEventListener('click', () => {
     powerNap.style.display = 'none';
     work.style.display = 'none';
     home.style.display = 'none';
-    // healthLink.classList.add('active');
 
+    healthLink.classList.add('active');
 
-    
     sleepLink.classList.remove('active');
     wakeLink.classList.remove('active');
     powerLink.classList.remove('active');
-    healthLink.classList.add('active');
     exerciseLink.classList.remove('active');
     workLink.classList.remove('active');
 
-    land.style.background = "#D4DCF1"
+    land.style.background = "#FFFFFF";
+}
+
+// Add click event listener to healthLink
+healthLink.addEventListener('click', showHealthSection);
+
+// Add keydown event listener for Ctrl + K
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key.toLowerCase() === 'y') {
+        event.preventDefault(); // Prevent the default action for Ctrl + K
+        showHealthSection();
+    }
 });
 
-exerciseLink.addEventListener('click', () => {
+// Function to handle displaying the exercise section and updating the classes
+function showExerciseSection() {
     exercise.style.display = 'flex';
     health.style.display = 'none';
     sleep.style.display = 'none';
@@ -182,19 +214,27 @@ exerciseLink.addEventListener('click', () => {
     work.style.display = 'none';
     home.style.display = 'none';
 
+    exerciseLink.classList.add('active');
 
-
-    
     sleepLink.classList.remove('active');
     wakeLink.classList.remove('active');
     powerLink.classList.remove('active');
     healthLink.classList.remove('active');
-    exerciseLink.classList.add('active');
     workLink.classList.remove('active');
 
-    land.style.background = "#D4DCF1"
-});
+    land.style.background = "#FFFFFF";
+}
 
+// Add click event listener to exerciseLink
+exerciseLink.addEventListener('click', showExerciseSection);
+
+// Add keydown event listener for Ctrl + ;
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'q') {
+        event.preventDefault(); // Prevent the default action for Ctrl + ;
+        showExerciseSection();
+    }
+});
 
 
 
@@ -219,7 +259,7 @@ function showHomeSection() {
     exerciseLink.classList.remove('active');
     workLink.classList.remove('active');
 
-    land.style.backgroundImage = "url('img/bar-chart-build.jpg')";
+    land.style.backgroundImage = "url('img/data_report.svg')";
     land.style.backgroundSize = "100vw 100vh";
     land.style.backgroundRepeat = "no-repeat";
 }
@@ -241,9 +281,20 @@ document.addEventListener('keydown', function(event) {
 
 // shortcut //
 
+const shortcutDiv = document.getElementById('shortcut');
+let isShortcutDivVisible = false;
+
 document.addEventListener('keydown', function(event) {
     if (event.ctrlKey && event.key === 'k') {
         event.preventDefault(); // Prevent the default browser action (commonly the browser search function)
         document.getElementById('searchBox').focus();
+        
+        if (isShortcutDivVisible) {
+            shortcutDiv.style.display = 'none';
+        } else {
+            shortcutDiv.style.display = 'block';
+        }
+        
+        isShortcutDivVisible = !isShortcutDivVisible; // Toggle the visibility state
     }
 });

@@ -1,6 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,100..900;1,100..900&family=Dosis:wght@200..800&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;700&family=Jura:wght@300..700&family=Kumbh+Sans:wght@400;500;600;700;800;900&family=Major+Mono+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@300;400;500;600;700;800;900&family=Overpass:wght@400;500;600;700;800;900&family=Plaster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:wght@400;700&family=Red+Hat+Display:wght@400;500;600;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,500&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap');
 
 * {
   margin: 0;
@@ -50,12 +48,11 @@ a {
   padding: 5px 15px;
   /* 
   margin: 10px;
- 
   border: none;
   outline: none;
   color: #696767;
-  border-radius: 2px; */
-
+  border-radius: 2px; 
+  */
 }
 
 a:hover {
@@ -67,17 +64,14 @@ a:hover {
 .active {
     background: #e7e7e7;
     color: #2b2929;
+    padding: 5px 5px;
 }
 
 .content-container {
     width: 100%;
     height: 100vh;
-   
     margin-top: 30px;
-
-    
 }
-
 
 
  .landing-page{
@@ -128,7 +122,7 @@ header {
     bottom: 20px;
     left: 50;
     position: absolute;
-    font-family: "Poppins", sans-serif;
+    font-family: "Dosis", sans-serif;
     
 }
 
@@ -164,7 +158,8 @@ header {
 
 
 .land {
-    background-image: url(img/bar-chart-build.jpg);
+    /* background-image: url(img/bar-chart-build.jpg); */
+    background-image: url(img/data_report.svg);
     background-size:  100vw 100vh ;
     background-repeat: no-repeat;
     width: 100%;
@@ -220,4 +215,68 @@ header {
     padding-inline: 10px;
     font-size: 14px;
     color: #696767;
+    box-shadow: inset 0 2px 4px 0 hsla(0,0%,0.08);
+}
+
+
+/* shortcut-div */
+
+.shortcut-div {
+    display: none;
+    position: absolute;
+    top: 75px;
+    right: 19%;
+    color: #696767;
+    background: #faf8ff;
+    width: 300px;
+    height: fit-content;
+   
+    outline: 1px solid #e7e7e7;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.shortcut-div ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    gap: 0;
+    
+}
+
+.shortcut-div ul li {
+    font-size: 14px;
+    padding-inline: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+   height: 30px;
+   
+}
+
+.shortcut-div ul li:last-child {
+    border: none;
+}
+
+kbd {
+    border: 1px solid #dbdbdb;
+    
+    padding-inline: 5px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.shortcut-title {
+    color: #3f3f3f;
+    font-size: 16px !important;
+    font-weight: 600;
 }
