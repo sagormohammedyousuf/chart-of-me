@@ -4,262 +4,190 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="style.css">
-      <title>Chart of SM Yousuf</title>
+      <link rel="shortcut icon" href="img/logo-for.png" type="image/x-icon">
+      <title>Metrics Tracker</title>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
    </head>
    <body>
-        <div class="land" id="land">
-            <header>
-                <div class="nav-left">
-                    <img class="logo" src="img/logo-for.png" alt="">
-                    
-                </div>
-                <nav class="nav">
-                <ul>
-                   <li id="home-link"><a href="#home">Home</a></li>
-                   <li id="sleep-link"><a href="#sleep-time">sleep-time</a></li>
-                   <li id="wake-link"><a href="#wakeup">wake-up</a></li>
-                   <li id="power-link"><a href="#power-nap" >Power-nap</a></li>
-                   <li id="work-link"><a href="#work-rate">Work-Rate</a></li>
-                   <li id="health-link"><a href="#health-rate">Health-Rate</a></li>
-                   <li id="exercise-link"><a href="#exercise">exercise</a></li>
-                </ul>
-                <nav>
-
-             <div class="nav-right">
-                <div class="div-search">
-                    <button>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#fff"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
-                    </button>
-                    <input type="search" id="searchBox" placeholder="search">
-
-                  
-                        <div class="shortcut-div" id="shortcut">
-                            <ul>
-                                <li class="shortcut-title">Shortcut</li>
-                                <li>
-                                    <p>Go home</p>
-                                    <p>
-                                        <kbd>Ctrl</kbd>
-                                        <kbd>h</kbd>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>Go Sleep-Time</p>
-                                    <p>
-                                        <kbd>Ctrl</kbd>
-                                        <kbd>d</kbd>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>Go Wake-Up</p>
-                                    <p>
-                                        <kbd>Ctrl</kbd>
-                                        <kbd>l</kbd>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>Go Power-Nap</p>
-                                    <p>
-                                        <kbd>Ctrl</kbd>
-                                        <kbd>b</kbd>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>Go Work-Rate</p>
-                                    <p>
-                                        <kbd>Ctrl</kbd>
-                                        <kbd>x</kbd>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>Go Health-Rate</p>
-                                    <p>
-                                        <kbd>Ctrl</kbd>
-                                        <kbd>y</kbd>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>Go Exercise</p>
-                                    <p>
-                                        <kbd>Ctrl</kbd>
-                                        <kbd>q</kbd>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>Go Search</p>
-                                    <p>
-                                        <kbd>Ctrl</kbd>
-                                        <kbd>k</kbd>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>Show or hide date name</p>
-                                    <p>
-                                        <kbd>Ctrl</kbd>
-                                        <kbd>,</kbd>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>Show or hide chart data</p>
-                                    <p>
-                                        <kbd>Ctrl</kbd>
-                                        <kbd>.</kbd>
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                </div>
-             </div>
-             </header>
-             <!-- landing page  -->
-             <div class="content">
-                <div class="home-page" id="home-page">
-                   <p>Metrics Tracker</p>
-                   <!-- <img src="img/statistics.png">  -->
-                   </div>
-                   <div id="sleep-div">
-                       <canvas id="sleep" style="width: 400px; height: 300px;"></canvas>
-                       <img src="img/boy-is-in-deep-sleep-10704492-8627823.png" alt="sleep">
-                   </div>
-                   <div id="wake-up-div">
-                       <canvas id="wake-up" style="width: 400px; height: 300px;"></canvas>
-                       <img src="img/wake-up.svg" alt="wake-up">
-                   </div>
-                   <div id="power-nap-div">
-                       <canvas id="power-nap" style="width: 400px; height: 300px;"></canvas>
-                       <img src="img/power-nap.svg" alt="power-nap">
-                   </div>
-                   <div id="work-rate-div">
-                       <canvas id="work-rate" style="width: 400px; height: 300px;"></canvas>
-                       <img src="img/work-.svg" alt="work">
-                   </div>
-                   <div id="health-rate-div">
-                       <canvas id="health-rate" style="width: 400px; height: 300px;"></canvas>
-                       <img src="img/health.svg" alt="health">
-                   </div>
-                   <div id="exercise-div">
-                       <canvas id="exercice" style="width: 400px; height: 300px;"></canvas>
-                       <img src="img/exercise.svg" alt="exercice">
-                   </div>
-                   
-             </div>
-       
+      <div class="land" id="land">
+         <header>
+            <div class="nav-left">
+               <img class="logo" src="img/logo-for.png" alt="">
+            </div>
+            <nav class="nav" aria-label="navbar">
+            <ul>
+               <li id="home-link"><a href="#home">Home</a></li>
+               <li id="sleep-link"><a href="#sleep-time">Sleep-time</a></li>
+               <li id="wake-link"><a href="#wakeup">wake-up</a></li>
+               <li id="power-link"><a href="#power-nap" >Power-nap</a></li>
+               <li id="work-link"><a href="#work-rate">Work-Rate</a></li>
+               <li id="health-link"><a href="#health-rate">Health-Rate</a></li>
+               <li id="exercise-link"><a href="#exercise">exercise</a></li>
+            </ul>
+            <nav>
+            <div class="nav-right">
+               <div class="div-search">
+                  <button>
+                     <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5e5e5e">
+                        <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+                     </svg>
+                  </button>
+                  <input type="search" id="searchBox" placeholder="search">
+                  <div class="shortcut-div" id="shortcut">
+                     <ul id="table">
+                        <li class="shortcut-title">Shortcut</li>
+                        <li>
+                           <p>Go home</p>
+                           <p>
+                              <kbd>Ctrl</kbd>
+                              <kbd>h</kbd>
+                           </p>
+                        </li>
+                        <li>
+                           <p>Go Sleep-Time</p>
+                           <p>
+                              <kbd>Ctrl</kbd>
+                              <kbd>d</kbd>
+                           </p>
+                        </li>
+                        <li>
+                           <p>Go Wake-Up</p>
+                           <p>
+                              <kbd>Ctrl</kbd>
+                              <kbd>l</kbd>
+                           </p>
+                        </li>
+                        <li>
+                           <p>Go Power-Nap</p>
+                           <p>
+                              <kbd>Ctrl</kbd>
+                              <kbd>b</kbd>
+                           </p>
+                        </li>
+                        <li>
+                           <p>Go Work-Rate</p>
+                           <p>
+                              <kbd>Ctrl</kbd>
+                              <kbd>x</kbd>
+                           </p>
+                        </li>
+                        <li>
+                           <p>Go Health-Rate</p>
+                           <p>
+                              <kbd>Ctrl</kbd>
+                              <kbd>y</kbd>
+                           </p>
+                        </li>
+                        <li>
+                           <p>Go Exercise</p>
+                           <p>
+                              <kbd>Ctrl</kbd>
+                              <kbd>q</kbd>
+                           </p>
+                        </li>
+                        <li>
+                           <p>Go Search</p>
+                           <p>
+                              <kbd>Ctrl</kbd>
+                              <kbd>k</kbd>
+                           </p>
+                        </li>
+                        <li>
+                           <p>Show or hide date name</p>
+                           <p>
+                              <kbd>Ctrl</kbd>
+                              <kbd>.</kbd>
+                           </p>
+                        </li>
+                        <li>
+                           <p>Show or hide chart data</p>
+                           <p>
+                              <kbd>Ctrl</kbd>
+                              <kbd>,</kbd>
+                           </p>
+                        </li>
+                        <!-- Additional items here -->
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- landing page  -->
+         <div class="content">
+            <div class="home-page" id="home-page">
+                <p>Metrics Tracker</p>
+            </div>
+            <div id="sleep-div">
+                <canvas id="sleep-0" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="sleep-1" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="sleep-2" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="sleep-3" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="sleep-4" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="sleep-5" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="sleep-6" style="width: 400px; height: 300px;"></canvas>
+                <img src="img/boy-is-in-deep-sleep.png" alt="Sleep">
+            </div>
+            <div id="wake-up-div">
+                <canvas id="wake-up-0" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="wake-up-1" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="wake-up-2" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="wake-up-3" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="wake-up-4" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="wake-up-5" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="wake-up-6" style="width: 400px; height: 300px;"></canvas>
+                <img src="img/wake-up.svg" alt="Wake-up">
+            </div>
+            <div id="power-nap-div">
+                <canvas  id="power-nap-0" style="width: 400px; height:300px;"></canvas>
+                <canvas  id="power-nap-1" style="width: 400px; height: 300px;"></canvas>
+                <canvas  id="power-nap-2" style="width: 400px; height: 300px;"></canvas>
+                <canvas  id="power-nap-3" style="width: 400px; height: 300px;"></canvas>
+                <canvas  id="power-nap-4" style="width: 400px; height: 300px;"></canvas>
+                <canvas  id="power-nap-5" style="width: 400px; height: 300px;"></canvas>
+                <canvas  id="power-nap-6" style="width: 400px; height: 300px;"></canvas>
+                <img src="img/power-nap.svg" alt="Power-nap">
+            </div>
+            <div id="work-rate-div">
+                <canvas id="work-rate-0" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="work-rate-1" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="work-rate-2" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="work-rate-3" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="work-rate-4" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="work-rate-5" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="work-rate-6" style="width: 400px; height: 300px;"></canvas>
+                <img src="img/work-.svg" alt="Work">
+            </div>
+            <div id="health-rate-div">
+                <canvas id="health-rate-0" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="health-rate-1" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="health-rate-2" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="health-rate-3" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="health-rate-4" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="health-rate-5" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="health-rate-6" style="width: 400px; height: 300px;"></canvas>
+                <img src="img/health.svg" alt="Health">
+            </div>
+            <div id="exercise-div">
+                <canvas id="exercise-0" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="exercise-1" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="exercise-2" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="exercise-3" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="exercise-4" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="exercise-5" style="width: 400px; height: 300px;"></canvas>
+                <canvas id="exercise-6" style="width: 400px; height: 300px;"></canvas>
+                <img src="img/exercise.svg" alt="Exercise">
+            </div>
         </div>
-      <script src="main.js"></script>
+   
+      </div>
 
-      <script src="sleep.js" >
-
-     </script>
-
-     <!-- exercice -->
-      <script >
-         const ctx = document.getElementById("exercice");
-         new Chart(ctx, {
-             type: 'line',
-             data: {
-                 labels: ['06.05', '07.05', '08.05', '09.05', '11.05', '12.05', '13.05', '14.05' , '15.05', '16.05', '17.05' , '18.05', '19.05','20.05', '21.05', '22.05', '23.05', '24.05', '25.05', '26.05'],
-                 datasets: [
-                     {
-                         label: 'Exercise min',
-                         backgroundColor: '#8B93FF', 
-                         borderColor: '#1E0342',
-                         data: [60, 50, 40, 45, 60,0,30,30,60,0,0,30,40,40,50,0,0,0,20,30],
-                         borderWidth: 2,
-                         fill: true 
-                     }
-                 ]
-             },
-             options: {
-                 scales: {
-                     y: {
-                         beginAtZero: true
-                     }
-                 }
-             }
-         });      
-         </script>
-
-         <!-- power nap  -->
-      <script>
-         const power = document.getElementById('power-nap');
-         
-         new Chart(power, {
-         type: 'line',
-         data: {
-         labels: ['06.05', '07.05', '08.05', '09.05', '11.05', '12.05', '13.05', '14.05' , '15.05', '16.05', '17.05' , '18.05', '19.05','20.05', '21.05', '22.05', '23.05', '24.05', '25.05', '26.05'],
-         datasets: [{
-         label: 'Power nap min',
-         data: [80, 70, 60, 30, 40 , 180,6,90 ,60,80,60,90,60,3,65,65,90,240,120+240,30+60],
-         borderWidth: 4,
-         backgroundColor: ['red', "blue", "yellow","green", "purple" , "orange"],
-         pointStyle: 'circle',
-         pointRadius: 10,
-         pointHoverRadius: 15
-         }]
-         },
-         options: {
-         responsive: true,
-         plugins: {
-         title: {
-         display: true,
-         // text: (ctx) => 'Point Style: ' + ctx.chart.data.datasets[0].pointStyle,
-         }
-         },
-         scales: {
-         y: {
-         beginAtZero: true
-         }
-         }
-         }
-         });
-      </script>
-    
-     <!-- wake-up -->
-      <script src="wake-up.js">
- 
-      </script>
-
-      <!-- work -->
-      <script >
-         const day = ['06.05.24', '07.05.24', '08.05.24', '09.05.24', '10.05.24', '11.05.24' , '12.05.24','13.04', '14.05' , '15.05', '16.05', '17.05' , '18.05', '19.05','20.05', '21.05', '22.05', '23.05', '24.05', '25.05', '26.05'];
-         
-         const configWork = {
-         type: 'line',
-         data: {
-         labels: day, 
-         datasets: [{
-         label: 'work rate',
-         data: [6, 7, 6,  6 ,NaN, 8,5,8,5,7,7,5,7,5,7,6,5,4,NaN,2,5],
-         borderColor: 'rgb(75, 192, 192)',
-         segment: {
-         borderColor: function(ctx) {
-           return ctx.p0.skip || ctx.p1.skip ? 'rgb(0, 0, 0, 0.2)' : ctx.p0.parsed.y > ctx.p1.parsed.y ? 'rgb(192, 75, 75)' : undefined;
-         },
-         borderDash: function(ctx) {
-           return ctx.p0.skip || ctx.p1.skip ? [6, 6] : undefined;
-         },
-         },
-         spanGaps: true
-         }]
-         },
-         options: {
-         fill: false,
-         interaction: {
-         intersect: false
-         },
-         radius: 0,
-         }
-         };
-         
-         // Initialize the chart
-         const ctxWork = document.getElementById('work-rate').getContext('2d');
-         new Chart(ctxWork, configWork);
-      </script>
-
-      <!-- health -->
+      <script src="shortcut.js"></script>
+      <script src="sleep.js" ></script>
+      <script src="exercise.js"></script>
+      <script src="nap.js" ></script>
+      <script src="wake-up.js"></script>
+      <script src="work-rate.js" ></script>
       <script src="health.js"></script>
-     
+      
    </body>
 </html>

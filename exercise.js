@@ -1,77 +1,67 @@
-
-
 // Data definitions
-const weekDayNameLabels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
-const labelsDate = ['06.05', '07.05', '08.05', '09.05', '10.05', '11.05', '12.05', '13.05', '14.05', '15.05', '16.05', '17.05', '18.05', '19.05', '20.05', '21.05', '22.05', '23.05', '24.05', '25.05', '26.05'];
-const wakeUpTime = [4.4, 4.4, 5.10, 4.4, 5.00, 5.20, 4.40, 4.40, 4.35, 4.35, 4.35, 4.35, 4.35, 5.10, 4.40, 4.35, 4.35, 4.40, 5.00, 4.35, 4.35];
-let wakeDisplay = false;
+const exWeekDayNameLabels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+const exLabelsDate = ['06.05', '07.05', '08.05', '09.05', '10.05', '11.05', '12.05', '13.05', '14.05', '15.05', '16.05', '17.05', '18.05', '19.05', '20.05', '21.05', '22.05', '23.05', '24.05', '25.05', '26.05'];
+const exerciseTime = [60, 50, 40, 45, 60, 0, 30, 30, 60, 0, 0, 30, 40, 40, 50, 0, 0, 0, 20, 30];
+let exDisplay = false; // Changed to lowercase to match usage
 
 // Function to update the chart options and re-render the chart
-function updateCharts() {
-  charts.forEach(chart => {
-    chart.options.scales.x2.display = wakeDisplay; // Toggle the display property for x2 scale
+function updateExCharts() {
+  chartsEx.forEach(chart => {
+    chart.options.scales.x2.display = exDisplay; // Toggle the display property for x2 scale
     chart.update();
   });
 }
 
-
 // Function to toggle dataset visibility
-function toggleDatasetVisibility(chart, datasetIndex) {
+function toggleExDatasetVisibility(chart, datasetIndex) {
   let meta = chart.getDatasetMeta(datasetIndex);
   meta.hidden = meta.hidden === null ? !chart.data.datasets[datasetIndex].hidden : null;
   chart.update();
 }
 
 // Chart definitions
-const chartConfigs = [
+const chartExConfigs = [
   {
-    elementId: 'wake-up-0',
+    elementId: 'exercise-0',
     config: {
       type: 'line',
       data: {
-        labels: labelsDate,
+        labels: exLabelsDate,
         datasets: [{
-          label: 'Wake up time',
-          data: wakeUpTime,
-          borderWidth: 4,
-          backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
+          label: 'Exercise min',
+          backgroundColor: '#8B93FF',
+          borderColor: '#1E0342',
+          data: exerciseTime,
+          borderWidth: 2,
+          fill: true,
         }]
       },
       options: {
         scales: {
           x2: {
-            display: wakeDisplay,
-            labels: weekDayNameLabels
+            display: exDisplay,
+            labels: exWeekDayNameLabels
           },
           x: {
             display: true,
-            labels: labelsDate
+            labels: exLabelsDate
           },
-       
           y: {
             beginAtZero: true
-          }
-        },
-        plugins: {
-          legend: {
-            display: false,
-            labels: {
-              fontColor: 'rgb(255, 99, 132)'
-            }
           }
         }
       }
     }
   },
   {
-    elementId: 'wake-up-1',
+    elementId: 'exercise-1',
     config: {
       type: 'line',
       data: {
-        labels: labelsDate,
+        labels: exLabelsDate,
         datasets: [{
-          label: 'wakeup',
-          data: wakeUpTime,
+          label: 'Exercise Time',
+          data: exerciseTime,
           borderColor: 'red',
           backgroundColor: 'rgba(255, 0, 0, 0.5)',
           yAxisID: 'y',
@@ -87,17 +77,17 @@ const chartConfigs = [
         plugins: {
           title: {
             display: true,
-            text: 'Wake-up time'
+            text: 'Exercise 1'
           }
         },
         scales: {
           x2: {
-            display: wakeDisplay,
-            labels: weekDayNameLabels
+            display: exDisplay,
+            labels: exWeekDayNameLabels
           },
           x: {
             display: true,
-            labels: labelsDate
+            labels: exLabelsDate
           },
           y: {
             type: 'linear',
@@ -117,14 +107,14 @@ const chartConfigs = [
     }
   },
   {
-    elementId: 'wake-up-2',
+    elementId: 'exercise-2',
     config: {
       type: 'line',
       data: {
-        labels: labelsDate,
+        labels: exLabelsDate,
         datasets: [{
-          label: 'Wake up time',
-          data: wakeUpTime,
+          label: 'Exercise 2',
+          data: exerciseTime,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
         }]
@@ -132,12 +122,12 @@ const chartConfigs = [
       options: {
         scales: {
           x2: {
-            display: wakeDisplay,
-            labels: weekDayNameLabels
+            display: exDisplay,
+            labels: exWeekDayNameLabels
           },
           x: {
             display: true,
-            labels: labelsDate
+            labels: exLabelsDate
           },
           y: {
             beginAtZero: true
@@ -155,14 +145,14 @@ const chartConfigs = [
     }
   },
   {
-    elementId: 'wake-up-3',
+    elementId: 'exercise-3',
     config: {
       type: 'line',
       data: {
-        labels: labelsDate,
+        labels: exLabelsDate,
         datasets: [{
-          label: 'wake-up',
-          data: wakeUpTime,
+          label: 'Exercise 3',
+          data: exerciseTime,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
           pointStyle: 'circle',
@@ -179,12 +169,12 @@ const chartConfigs = [
         },
         scales: {
           x2: {
-            display: wakeDisplay,
-            labels: weekDayNameLabels
+            display: exDisplay,
+            labels: exWeekDayNameLabels
           },
           x: {
             display: true,
-            labels: labelsDate
+            labels: exLabelsDate
           },
           y: {
             beginAtZero: true
@@ -194,21 +184,21 @@ const chartConfigs = [
     }
   },
   {
-    elementId: 'wake-up-4',
+    elementId: 'exercise-4',
     config: {
       type: 'line',
       data: {
-        labels: labelsDate,
+        labels: exLabelsDate,
         datasets: [{
-          label: 'sleep',
-          data: wakeUpTime,
+          label: 'Exercise 4',
+          data: exerciseTime,
           borderColor: 'rgb(75, 192, 192)',
           segment: {
-            borderColor: function(ctxSleep) {
-              return ctxSleep.p0.skip || ctxSleep.p1.skip ? 'rgb(0, 0, 0, 0.2)' : ctxSleep.p0.parsed.y > ctxSleep.p1.parsed.y ? 'rgb(192, 75, 75)' : undefined;
+            borderColor: function(ctx) {
+              return ctx.p0.skip || ctx.p1.skip ? 'rgb(0, 0, 0, 0.2)' : ctx.p0.parsed.y > ctx.p1.parsed.y ? 'rgb(192, 75, 75)' : undefined;
             },
-            borderDash: function(ctxSleep) {
-              return ctxSleep.p0.skip || ctxSleep.p1.skip ? [6, 6] : undefined;
+            borderDash: function(ctx) {
+              return ctx.p0.skip || ctx.p1.skip ? [6, 6] : undefined;
             },
           },
           spanGaps: true
@@ -222,12 +212,12 @@ const chartConfigs = [
         radius: 0,
         scales: {
           x2: {
-            display: wakeDisplay,
-            labels: weekDayNameLabels
+            display: exDisplay,
+            labels: exWeekDayNameLabels
           },
           x: {
             display: true,
-            labels: labelsDate
+            labels: exLabelsDate
           },
           y: {
             beginAtZero: true
@@ -237,14 +227,14 @@ const chartConfigs = [
     }
   },
   {
-    elementId: 'wake-up-5',
+    elementId: 'exercise-5',
     config: {
       type: 'line',
       data: {
-        labels: labelsDate,
+        labels: exLabelsDate,
         datasets: [{
-          label: 'sleep time',
-          data: wakeUpTime,
+          label: 'Exercise 5',
+          data: exerciseTime,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple'],
           stepped: true,
@@ -264,12 +254,12 @@ const chartConfigs = [
         },
         scales: {
           x2: {
-            display: wakeDisplay,
-            labels: weekDayNameLabels
+            display: exDisplay,
+            labels: exWeekDayNameLabels
           },
           x: {
             display: true,
-            labels: labelsDate
+            labels: exLabelsDate
           },
           y: {
             beginAtZero: true
@@ -279,29 +269,29 @@ const chartConfigs = [
     }
   },
   {
-    elementId: 'wake-up-6',
+    elementId: 'exercise-6',
     config: {
       type: 'line',
       data: {
-        labels: labelsDate,
+        labels: exLabelsDate,
         datasets: [{
           label: 'Exercise min',
           backgroundColor: '#8B93FF',
           borderColor: '#1E0342',
-          data: wakeUpTime,
+          data: exerciseTime,
           borderWidth: 2,
           fill: true,
         }]
       },
       options: {
         scales: {
-         x2: {
-            display: wakeDisplay,
-            labels: weekDayNameLabels
+          x2: {
+            display: exDisplay,
+            labels: exWeekDayNameLabels
           },
           x: {
             display: true,
-            labels: labelsDate
+            labels: exLabelsDate
           },
           y: {
             beginAtZero: true
@@ -313,19 +303,19 @@ const chartConfigs = [
 ];
 
 // Initialize all charts
-const charts = chartConfigs.map(config => new Chart(document.getElementById(config.elementId).getContext('2d'), config.config));
+const chartsEx = chartExConfigs.map(config => new Chart(document.getElementById(config.elementId).getContext('2d'), config.config));
 
-// Event listener to toggle wakeDisplay when Ctrl + , is pressed
+// Event listener to toggle exDisplay when Ctrl + , is pressed
 document.addEventListener('keydown', function(event) {
-  if (event.ctrlKey && event.key  === '.') {
-    wakeDisplay = !wakeDisplay;
-    updateCharts();
+  if (event.ctrlKey && event.key === '.') {
+    exDisplay = !exDisplay;
+    updateExCharts();
   }
 });
 
 // Event listener to toggle dataset visibility when Ctrl + . is pressed
 document.addEventListener('keydown', function(event) {
   if (event.ctrlKey && event.key === ',') {
-    charts.forEach(chart => toggleDatasetVisibility(chart, 0));
+    chartsEx.forEach(chart => toggleExDatasetVisibility(chart, 0));
   }
 });

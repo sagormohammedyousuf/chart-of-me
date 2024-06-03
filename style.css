@@ -21,9 +21,11 @@ body {
  justify-content: center;
  width: 100%;
  height: 100px;
+
  top: 0;
  left: 0;
  position: fixed;
+
 }
 
 .nav ul {
@@ -62,7 +64,7 @@ a:hover {
 }
 
 .active {
-    background: #e7e7e7;
+    background: #E6E6E6;
     color: #2b2929;
     padding: 5px 5px;
 }
@@ -91,6 +93,11 @@ header {
    display: flex;
    align-items: center;
    justify-content: space-between;
+    width: 100%;
+   top: 0;
+   left: 0;
+   position: fixed;
+ 
    
 }
 
@@ -117,7 +124,7 @@ header {
 .home-page p {
    
     color: #2D90AE;
-    font-size: 45px;
+    font-size: 55px;
     font-weight: 700;
     bottom: 20px;
     left: 50;
@@ -181,13 +188,13 @@ header {
 }
 
 .div-search {
-    border: 1px solid #66718d;
+    border: 1px solid #e9e4e4;
     height: 35px;
     width: 220px;
     display: flex;
     align-items: center;
     justify-content:flex-end;
-    margin-left: 50px;
+    margin-left: 150px;
     overflow: hidden;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -201,7 +208,7 @@ header {
     outline: none;
     height: 100%;
     width: 15%;
-    background: #66718d;
+    background: #f0f0f0;
     cursor: pointer;
     
 }
@@ -215,7 +222,7 @@ header {
     padding-inline: 10px;
     font-size: 14px;
     color: #696767;
-    box-shadow: inset 0 2px 4px 0 hsla(0,0%,0.08);
+    /* box-shadow: inset 0 2px 4px 0 hsla(0,0%,0.08); */
 }
 
 
@@ -230,7 +237,7 @@ header {
     background: #faf8ff;
     width: 300px;
     height: fit-content;
-   
+    overflow: hidden;
     outline: 1px solid #e7e7e7;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -255,11 +262,22 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    border-bottom: 1px solid #e7e7e7;
+    border-bottom: 1px solid #eeebeb;
    height: 30px;
+   
    
 }
 
+.shortcut-div ul li:hover{
+    background: hsl(194, 36%, 56%);
+}
+
+#shortcut {
+    display: none;
+}
+.highlight {
+    background: hsl(194, 36%, 56%);
+}
 .shortcut-div ul li:last-child {
     border: none;
 }
@@ -280,3 +298,26 @@ kbd {
     font-size: 16px !important;
     font-weight: 600;
 }
+
+
+
+/* for short-cut functionality // */
+
+/* #sleep-1, #sleep-2, #sleep-3, #sleep-4,  #sleep-5 {
+    display: none !important;
+} */
+
+
+
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+
+/* canvas {
+    border: 1px solid red;
+}  */
