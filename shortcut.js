@@ -260,86 +260,47 @@ document.addEventListener('keydown', function(event) {
 });
 
 // shortcut //
-// const shortcutDiv = document.getElementById('shortcut');
-// const searchBox = document.getElementById('searchBox');
-// let isShortcutDivVisible = false;
+const shortcutDiv = document.getElementById('shortcut');
+const searchBox = document.getElementById('searchBox');
+let isShortcutDivVisible = false;
 
-// document.addEventListener('keydown', function(event) {
-//     if (event.ctrlKey && event.key === 'k') {
-//         event.preventDefault(); // Prevent the default browser action (commonly the browser search function)
-//         searchBox.focus();
-//         toggleShortcutDiv();
-//     }
-// });
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'k') {
+        event.preventDefault(); // Prevent the default browser action (commonly the browser search function)
+        searchBox.focus();
+        toggleShortcutDiv();
+    }
+});
 
-// searchBox.addEventListener('focus', function() {
-//     toggleShortcutDiv();
-// });
+searchBox.addEventListener('focus', function() {
+    toggleShortcutDiv();
+});
 
-// function toggleShortcutDiv() {
-//     if (isShortcutDivVisible) {
-//         shortcutDiv.style.display = 'none';
-//     } else {
-//         shortcutDiv.style.display = 'block';
-//     }
+function toggleShortcutDiv() {
+    if (isShortcutDivVisible) {
+        shortcutDiv.style.display = 'none';
+    } else {
+        shortcutDiv.style.display = 'block';
+    }
     
-//     isShortcutDivVisible = !isShortcutDivVisible; // Toggle the visibility state
-// }
+    isShortcutDivVisible = !isShortcutDivVisible; // Toggle the visibility state
+}
 
 
 // search-box // 
 
 
-// document.getElementById('searchBox').addEventListener('keyup', function() {
-//     let value = this.value.toLowerCase();
-//     let rows = document.querySelectorAll('#table li');
-//     rows.forEach(function(row) {
-//         let text = row.textContent.toLowerCase();
-//         row.style.display = text.includes(value) ? '' : 'none';
+document.getElementById('searchBox').addEventListener('keyup', function() {
+    let value = this.value.toLowerCase();
+    let rows = document.querySelectorAll('#table li');
+    rows.forEach(function(row) {
+        let text = row.textContent.toLowerCase();
+        row.style.display = text.includes(value) ? '' : 'none';
         
-//     });
-// });
+    });
+});
 
 
-const shortcutDiv = document.getElementById('shortcut');
-        const searchBox = document.getElementById('searchBox');
-        let isShortcutDivVisible = false;
-
-        document.addEventListener('keydown', function(event) {
-            if (event.ctrlKey && event.key === 'k') {
-                event.preventDefault(); // Prevent the default browser action (commonly the browser search function)
-                searchBox.focus();
-                toggleShortcutDiv();
-            }
-        });
-
-        searchBox.addEventListener('focus', function() {
-            toggleShortcutDiv();
-        });
-
-        function toggleShortcutDiv() {
-            if (isShortcutDivVisible) {
-                shortcutDiv.style.display = 'none';
-            } else {
-                shortcutDiv.style.display = 'block';
-            }
-            isShortcutDivVisible = !isShortcutDivVisible; // Toggle the visibility state
-        }
-
-        document.getElementById('searchBox').addEventListener('keyup', function() {
-            let value = this.value.toLowerCase();
-            let rows = document.querySelectorAll('#table li');
-            rows.forEach(function(row) {
-                let text = row.textContent.toLowerCase();
-                if (text === value) {
-                    row.style.display = '';
-                    row.classList.add('highlight');
-                } else {
-                    row.style.display = text.includes(value) ? '' : 'none';
-                    row.classList.remove('highlight');
-                }
-            });
-        });
 
 //  chart type shortcuts const sleep0 = document.getElementById('sleep-0');
 const sleep1 = document.getElementById('sleep-1');

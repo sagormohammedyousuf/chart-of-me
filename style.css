@@ -276,7 +276,7 @@ header {
     display: none;
 }
 .highlight {
-    background: hsl(194, 36%, 56%);
+    background: hsl(194, 36%, 56%) !important;
 }
 .shortcut-div ul li:last-child {
     border: none;
