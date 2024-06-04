@@ -33,7 +33,7 @@ const chartHealthConfigs = [
       data: {
         labels: healthLabelsDate,
         datasets: [{
-          label: 'health 5',
+          label: 'health-rate',
           data: healthRate,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple'],
@@ -49,7 +49,7 @@ const chartHealthConfigs = [
         },
         plugins: {
           title: {
-            display: true,
+            display: false,
           }
         },
         scales: {
@@ -75,7 +75,7 @@ const chartHealthConfigs = [
       data: {
         labels: healthLabelsDate,
         datasets: [{
-          label: 'health one',
+          label: 'health-rate',
           data: healthRate,
           borderColor: 'red',
           backgroundColor: 'rgba(255, 0, 0, 0.5)',
@@ -91,7 +91,7 @@ const chartHealthConfigs = [
         stacked: false,
         plugins: {
           title: {
-            display: true,
+            display: false,
             text: 'health rate 1'
           }
         },
@@ -128,7 +128,7 @@ const chartHealthConfigs = [
       data: {
         labels: healthLabelsDate,
         datasets: [{
-          label: 'health 2',
+          label: 'health-rate',
           data: healthRate,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
@@ -150,7 +150,7 @@ const chartHealthConfigs = [
         },
         plugins: {
           legend: {
-            display: false,
+            display: true,
             labels: {
               fontColor: 'rgb(255, 99, 132)'
             }
@@ -166,7 +166,7 @@ const chartHealthConfigs = [
       data: {
         labels: healthLabelsDate,
         datasets: [{
-          label: 'health rate 3',
+          label: 'health-rate',
           data: healthRate,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
@@ -179,7 +179,7 @@ const chartHealthConfigs = [
         responsive: true,
         plugins: {
           title: {
-            display: true,
+            display: false,
           }
         },
         scales: {
@@ -205,7 +205,7 @@ const chartHealthConfigs = [
       data: {
         labels: healthLabelsDate,
         datasets: [{
-          label: 'health rate 4',
+          label: 'health-rate',
           data: healthRate,
           borderColor: 'rgb(75, 192, 192)',
           segment: {
@@ -248,7 +248,7 @@ const chartHealthConfigs = [
       data: {
         labels: healthLabelsDate,
         datasets: [{
-          label: 'health 5',
+          label: 'health-rate',
           data: healthRate,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple'],
@@ -264,7 +264,7 @@ const chartHealthConfigs = [
         },
         plugins: {
           title: {
-            display: true,
+            display: false,
           }
         },
         scales: {
@@ -290,7 +290,7 @@ const chartHealthConfigs = [
       data: {
         labels: healthLabelsDate,
         datasets: [{
-          label: 'Exercise min',
+          label: 'health-rate',
           backgroundColor: '#8B93FF',
           borderColor: '#1E0342',
           data: healthRate,

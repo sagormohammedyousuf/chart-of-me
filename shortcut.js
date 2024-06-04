@@ -296,7 +296,6 @@ document.getElementById('searchBox').addEventListener('keyup', function() {
     rows.forEach(function(row) {
         let text = row.textContent.toLowerCase();
         row.style.display = text.includes(value) ? '' : 'none';
-        
     });
 });
 
@@ -1100,7 +1099,42 @@ document.addEventListener('keydown', function(event) {
   
   document.addEventListener('keydown', function(event) {
     if (event.ctrlKey && event.key === '.') {
-        toggleDatasetVisibility(myChart, 0); // Assuming 'Exercise min' is the first dataset
+        toggleDatasetVisibility(myChart, 0);
     }
+  });
+  
+
+
+
+
+
+
+  // chart full screen // 
+
+  const canvasList = document.querySelectorAll('canvas');
+  const chartTypeImgList = document.querySelectorAll('#content div img');
+  
+  let toggleState = false; 
+  
+  document.addEventListener('keydown', function(e){
+      if(e.ctrlKey && e.key === '*') {
+          toggleState = !toggleState; 
+  
+          canvasList.forEach(function(canvas) {
+              if (toggleState) {
+                  canvas.style.width = '60%';
+              } else {
+                  canvas.style.width = ''; 
+              }
+          });
+  
+          chartTypeImgList.forEach(function(chartTypeImg) {
+              if (toggleState) {
+                  chartTypeImg.style.display = 'none';
+              } else {
+                  chartTypeImg.style.display = ''; 
+              }
+          });
+      }
   });
   

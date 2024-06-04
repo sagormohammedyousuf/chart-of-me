@@ -388,7 +388,7 @@ const chartSleepConfigs = [
           stacked: false,
           plugins: {
             title: {
-              display: true,
+              display: false,
               text: 'sleep 1'
             }
           },
@@ -441,7 +441,7 @@ const chartSleepConfigs = [
         stacked: false,
         plugins: {
           title: {
-            display: true,
+            display: false,
             text: 'sleep 1'
           }
         },
@@ -478,7 +478,7 @@ const chartSleepConfigs = [
       data: {
         labels: sleepLabelsDate,
         datasets:[{
-          label: 'sleep 2',
+          label: 'sleep',
           data: sleepTime,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
@@ -500,7 +500,7 @@ const chartSleepConfigs = [
         },
         plugins: {
           legend: {
-            display: false,
+            display: true,
             labels: {
               fontColor: 'rgb(255, 99, 132)'
             }
@@ -516,7 +516,7 @@ const chartSleepConfigs = [
       data: {
         labels: sleepLabelsDate ,
         datasets: [{
-          label: 'sleep 3',
+          label: 'sleep',
           data: sleepTime,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
@@ -529,7 +529,7 @@ const chartSleepConfigs = [
         responsive: true,
         plugins: {
           title: {
-            display: true,
+            display: false,
           }
         },
         scales: {
@@ -555,7 +555,7 @@ const chartSleepConfigs = [
       data: {
         labels: sleepLabelsDate,
         datasets: [{
-          label: 'sleep 4',
+          label: 'sleep',
           data: sleepTime,
           borderColor: 'rgb(75, 192, 192)',
           segment: {
@@ -598,7 +598,7 @@ const chartSleepConfigs = [
       data: {
         labels: sleepLabelsDate,
         datasets: [{
-          label: 'sleep 5',
+          label: 'sleep',
           data: sleepTime,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple'],
@@ -614,7 +614,7 @@ const chartSleepConfigs = [
         },
         plugins: {
           title: {
-            display: true,
+            display: false,
           }
         },
         scales: {
@@ -640,7 +640,7 @@ const chartSleepConfigs = [
       data: {
         labels: sleepLabelsDate,
         datasets: [{
-          label: 'sleep min',
+          label: 'sleep',
           backgroundColor: '#8B93FF',
           borderColor: '#1E0342',
           data: sleepTime,

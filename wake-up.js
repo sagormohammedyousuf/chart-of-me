@@ -31,7 +31,7 @@ const chartConfigs = [
       data: {
         labels: labelsDate,
         datasets: [{
-          label: 'Wake up time',
+          label: 'wake-up',
           data: wakeUpTime,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
@@ -54,7 +54,7 @@ const chartConfigs = [
         },
         plugins: {
           legend: {
-            display: false,
+            display: true,
             labels: {
               fontColor: 'rgb(255, 99, 132)'
             }
@@ -70,7 +70,7 @@ const chartConfigs = [
       data: {
         labels: labelsDate,
         datasets: [{
-          label: 'wakeup',
+          label: 'wake-up',
           data: wakeUpTime,
           borderColor: 'red',
           backgroundColor: 'rgba(255, 0, 0, 0.5)',
@@ -86,8 +86,8 @@ const chartConfigs = [
         stacked: false,
         plugins: {
           title: {
-            display: true,
-            text: 'Wake-up time'
+            display: false,
+            text: 'wake-up-time'
           }
         },
         scales: {
@@ -123,7 +123,7 @@ const chartConfigs = [
       data: {
         labels: labelsDate,
         datasets: [{
-          label: 'Wake up time',
+          label: 'wake-up',
           data: wakeUpTime,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
@@ -145,7 +145,7 @@ const chartConfigs = [
         },
         plugins: {
           legend: {
-            display: false,
+            display: true,
             labels: {
               fontColor: 'rgb(255, 99, 132)'
             }
@@ -174,7 +174,7 @@ const chartConfigs = [
         responsive: true,
         plugins: {
           title: {
-            display: true,
+            display: false,
           }
         },
         scales: {
@@ -200,7 +200,7 @@ const chartConfigs = [
       data: {
         labels: labelsDate,
         datasets: [{
-          label: 'sleep',
+          label: 'wake-up',
           data: wakeUpTime,
           borderColor: 'rgb(75, 192, 192)',
           segment: {
@@ -243,7 +243,7 @@ const chartConfigs = [
       data: {
         labels: labelsDate,
         datasets: [{
-          label: 'sleep time',
+          label: 'wake-up',
           data: wakeUpTime,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple'],
@@ -259,7 +259,7 @@ const chartConfigs = [
         },
         plugins: {
           title: {
-            display: true,
+            display: false,
           }
         },
         scales: {
@@ -285,7 +285,7 @@ const chartConfigs = [
       data: {
         labels: labelsDate,
         datasets: [{
-          label: 'Exercise min',
+          label: 'wake-up',
           backgroundColor: '#8B93FF',
           borderColor: '#1E0342',
           data: wakeUpTime,

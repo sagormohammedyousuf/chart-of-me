@@ -29,7 +29,7 @@ const chartWorkConfigs = [
         data: {
           labels: workLabelsDate,
           datasets: [{
-            label: 'Work rate 4',
+            label: 'work-rate',
             data: workRateData,
             borderColor: 'rgb(75, 192, 192)',
             segment: {
@@ -72,7 +72,7 @@ const chartWorkConfigs = [
       data: {
         labels: workLabelsDate,
         datasets: [{
-          label: 'Work Rate 1',
+          label: 'work-rate',
           data: workRateData,
           borderColor: 'red',
           backgroundColor: 'rgba(255, 0, 0, 0.5)',
@@ -88,8 +88,8 @@ const chartWorkConfigs = [
         stacked: false,
         plugins: {
           title: {
-            display: true,
-            text: 'work rate 1'
+            display: false,
+            text: 'work-rate'
           }
         },
         scales: {
@@ -125,7 +125,7 @@ const chartWorkConfigs = [
       data: {
         labels: workLabelsDate,
         datasets: [{
-          label: 'work-rate-2',
+          label: 'work-rate',
           data: workRateData,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
@@ -147,7 +147,7 @@ const chartWorkConfigs = [
         },
         plugins: {
           legend: {
-            display: false,
+            display: true,
             labels: {
               fontColor: 'rgb(255, 99, 132)'
             }
@@ -163,7 +163,7 @@ const chartWorkConfigs = [
       data: {
         labels: workLabelsDate,
         datasets: [{
-          label: 'work-rate3',
+          label: 'work-rate',
           data: workRateData,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
@@ -176,7 +176,7 @@ const chartWorkConfigs = [
         responsive: true,
         plugins: {
           title: {
-            display: true,
+            display: false,
           }
         },
         scales: {
@@ -202,7 +202,7 @@ const chartWorkConfigs = [
       data: {
         labels: workLabelsDate,
         datasets: [{
-          label: 'Work rate 4',
+          label: 'work-rate',
           data: workRateData,
           borderColor: 'rgb(75, 192, 192)',
           segment: {
@@ -245,7 +245,7 @@ const chartWorkConfigs = [
       data: {
         labels: workLabelsDate,
         datasets: [{
-          label: 'work rate 5',
+          label: 'work-rate',
           data: workRateData,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple'],
@@ -261,7 +261,7 @@ const chartWorkConfigs = [
         },
         plugins: {
           title: {
-            display: true,
+            display: false,
           }
         },
         scales: {
@@ -287,7 +287,7 @@ const chartWorkConfigs = [
       data: {
         labels: workLabelsDate,
         datasets: [{
-          label: 'work-rate-6',
+          label: 'work-rate',
           backgroundColor: '#8B93FF',
           borderColor: '#1E0342',
           data: workRateData,

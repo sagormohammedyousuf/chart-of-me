@@ -28,7 +28,7 @@ const chartExConfigs = [
       data: {
         labels: exLabelsDate,
         datasets: [{
-          label: 'Exercise min',
+          label: 'exercise',
           backgroundColor: '#8B93FF',
           borderColor: '#1E0342',
           data: exerciseTime,
@@ -60,7 +60,7 @@ const chartExConfigs = [
       data: {
         labels: exLabelsDate,
         datasets: [{
-          label: 'Exercise Time',
+          label: 'exercise',
           data: exerciseTime,
           borderColor: 'red',
           backgroundColor: 'rgba(255, 0, 0, 0.5)',
@@ -76,7 +76,7 @@ const chartExConfigs = [
         stacked: false,
         plugins: {
           title: {
-            display: true,
+            display:false,
             text: 'Exercise 1'
           }
         },
@@ -113,7 +113,7 @@ const chartExConfigs = [
       data: {
         labels: exLabelsDate,
         datasets: [{
-          label: 'Exercise 2',
+          label: 'exercise',
           data: exerciseTime,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
@@ -135,7 +135,7 @@ const chartExConfigs = [
         },
         plugins: {
           legend: {
-            display: false,
+            display: true,
             labels: {
               fontColor: 'rgb(255, 99, 132)'
             }
@@ -151,7 +151,7 @@ const chartExConfigs = [
       data: {
         labels: exLabelsDate,
         datasets: [{
-          label: 'Exercise 3',
+          label: 'exercise',
           data: exerciseTime,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
@@ -164,7 +164,7 @@ const chartExConfigs = [
         responsive: true,
         plugins: {
           title: {
-            display: true,
+            display: false,
           }
         },
         scales: {
@@ -190,7 +190,7 @@ const chartExConfigs = [
       data: {
         labels: exLabelsDate,
         datasets: [{
-          label: 'Exercise 4',
+          label: 'exercise',
           data: exerciseTime,
           borderColor: 'rgb(75, 192, 192)',
           segment: {
@@ -233,7 +233,7 @@ const chartExConfigs = [
       data: {
         labels: exLabelsDate,
         datasets: [{
-          label: 'Exercise 5',
+          label: 'exercise',
           data: exerciseTime,
           borderWidth: 4,
           backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple'],
@@ -249,7 +249,7 @@ const chartExConfigs = [
         },
         plugins: {
           title: {
-            display: true,
+            display: false,
           }
         },
         scales: {
@@ -275,7 +275,7 @@ const chartExConfigs = [
       data: {
         labels: exLabelsDate,
         datasets: [{
-          label: 'Exercise min',
+          label: 'exercise',
           backgroundColor: '#8B93FF',
           borderColor: '#1E0342',
           data: exerciseTime,

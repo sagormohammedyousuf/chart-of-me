@@ -112,6 +112,8 @@ header {
 
 .content {
     margin-top: 150px;
+  
+    width: 100%;
 }
 
 .home-page {
@@ -131,11 +133,6 @@ header {
     position: absolute;
     font-family: "Dosis", sans-serif;
     
-}
-
-.home-page img {
-    width: 50%;
-    height: 100%;
 }
 
 
@@ -269,7 +266,7 @@ header {
 }
 
 .shortcut-div ul li:hover{
-    background: hsl(194, 36%, 56%);
+    background: hsl(194, 48%, 77%);
 }
 
 #shortcut {
