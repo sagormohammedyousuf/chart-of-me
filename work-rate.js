@@ -292,7 +292,7 @@ const chartWorkConfigs = [
         labels: workLabelsDate,
         datasets: [{
           label: 'work-rate',
-          backgroundColor: '#8B93FF',
+          backgroundColor: '#6c63ff',
           borderColor: '#1E0342',
           data: workRateData,
           borderWidth: 2,

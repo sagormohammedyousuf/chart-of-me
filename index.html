@@ -17,23 +17,43 @@
             </div>
             <nav class="nav" aria-label="navigation">
             <ul>
-               <li id="home-link"><a href="#home">Home</a></li>
-               <li id="sleep-link"><a href="#sleep-time">Sleep-time</a></li>
-               <li id="wake-link"><a href="#wakeup">wake-up</a></li>
-               <li id="power-link"><a href="#power-nap" >Power-nap</a></li>
-               <li id="work-link"><a href="#work-rate">Work-Rate</a></li>
-               <li id="health-link"><a href="#health-rate">Health-Rate</a></li>
-               <li id="exercise-link"><a href="#exercise">exercise</a></li>
+               <li id="home-link"><a class="tooltip" href="#home">Home
+                  <span class="tooltiptext"><kbd>Ctrl</kbd> <kbd>h</kbd></span>
+               </a></li>
+               <li id="sleep-link"><a class="tooltip" href="#sleep-time">Sleep-time
+                  <span class="tooltiptext"><kbd>Ctrl</kbd> <kbd>d</kbd></span>
+               </a></li>
+               <li id="wake-link"><a class="tooltip" href="#wakeup">wake-up
+                  <span class="tooltiptext"><kbd>Ctrl</kbd> <kbd>l</kbd></span>
+               </a></li>
+               <li id="power-link"><a class="tooltip" href="#power-nap">Power-nap
+                  <span class="tooltiptext"><kbd>Ctrl</kbd> <kbd>b</kbd></span>
+               </a></li>
+               <li id="work-link"><a class="tooltip" href="#work-rate">Work-Rate
+                  <span class="tooltiptext"><kbd>Ctrl</kbd> <kbd>x</kbd></span>
+               </a></li>
+               <li id="health-link"><a class="tooltip" href="#health-rate">Health-Rate
+                  <span class="tooltiptext"><kbd>Ctrl</kbd> <kbd>y</kbd></span>
+               </a></li>
+               <li id="exercise-link"><a class="tooltip" href="#exercise">exercise
+                  <span class="tooltiptext"><kbd>Ctrl</kbd> <kbd>q</kbd></span>
+               </a></li>
+               
+
             </ul>
             <nav>
             <div class="nav-right">
                <div class="div-search">
                   <button>
-                     <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#5e5e5e">
+                     <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#fff">
                         <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
                      </svg>
                   </button>
                   <input type="search" id="searchBox" placeholder="search">
+                  <div class="kbd-div" id="kbd-div">
+                     <kbd class="likely-text ctrl" id="ctrl">Ctrl</kbd>
+                     <kbd class="likely-text k" id="k">K</kbd>
+                  </div>
                   <div class="shortcut-div" id="shortcut">
                      <ul id="table">
                         <li class="shortcut-title">Shortcut</li>
@@ -94,7 +114,7 @@
                            </p>
                         </li>
                         <li>
-                           <p>Show or hide date name</p>
+                           <p>Show or hide week day name</p>
                            <p>
                               <kbd>Ctrl</kbd>
                               <kbd>.</kbd>
@@ -212,6 +232,10 @@
       <script src="wake-up.js"></script>
       <script src="work-rate.js" ></script>
       <script src="health.js"></script>
-      
+      <script>
+         // Optional: If you want to add tooltips dynamically, you can do it like this
+    
+
+      </script>
    </body>
 </html>

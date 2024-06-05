@@ -31,7 +31,7 @@ const chartExConfigs = [
         labels: exLabelsDate,
         datasets: [{
           label: 'exercise',
-          backgroundColor: '#8B93FF',
+          backgroundColor: '#6c63ff',
           borderColor: '#1E0342',
           data: exerciseTime,
           borderWidth: 2,
@@ -278,7 +278,7 @@ const chartExConfigs = [
         labels: exLabelsDate,
         datasets: [{
           label: 'exercise',
-          backgroundColor: '#8B93FF',
+          backgroundColor: '#6c63ff',
           borderColor: '#1E0342',
           data: exerciseTime,
           borderWidth: 2,

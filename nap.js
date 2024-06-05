@@ -570,7 +570,7 @@ const chartNapConfigs = [
         labels: napLabelsDate,
         datasets: [{
           label: 'power-nap',
-          backgroundColor: '#8B93FF',
+          backgroundColor: '#6c63ff',
           borderColor: '#1E0342',
           data: napTime,
           borderWidth: 2,

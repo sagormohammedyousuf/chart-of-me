@@ -291,7 +291,7 @@ const chartHealthConfigs = [
         labels: healthLabelsDate,
         datasets: [{
           label: 'health-rate',
-          backgroundColor: '#8B93FF',
+          backgroundColor: '#6c63ff',
           borderColor: '#1E0342',
           data: healthRate,
           borderWidth: 2,

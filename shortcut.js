@@ -69,8 +69,8 @@ function showWakeSection() {
     work.style.display = 'none';
     home.style.display = 'none';
 
+   
     wakeLink.classList.add('active');
-
     sleepLink.classList.remove('active');
     powerLink.classList.remove('active');
     healthLink.classList.remove('active');
@@ -274,8 +274,23 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
+
+
+const kbdDiv = document.getElementById('kbd-div');
+
+
+searchBox.addEventListener('focus', function() {
+    kbdDiv.style.display = 'none';
+});
+
+searchBox.addEventListener('blur', function() {
+    kbdDiv.style.display = 'flex';
+});
+
 searchBox.addEventListener('focus', function() {
     toggleShortcutDiv();
+   
+  
 });
 
 function toggleShortcutDiv() {
@@ -305,12 +320,12 @@ document.getElementById('searchBox').addEventListener('keyup', function() {
     let rows = document.querySelectorAll('#table li');
     rows.forEach(function(row) {
         let text = row.textContent.toLowerCase();
-        if (value === '') { // If search value is empty
+        if (value === '') { 
             row.style.display = ''; 
             row.style.background = ''; 
-        } else { // If search value is not empty
+        } else { 
             row.style.display = text.includes(value) ? '' : 'none';
-            row.style.background = text.includes(value) ? 'hsl(194, 48%, 77%)' : ''; // Set background color only if text matches search value
+            row.style.background = text.includes(value) ? '#ebd0ff' : ''; 
         }
     });
 });
