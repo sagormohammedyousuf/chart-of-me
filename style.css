@@ -272,12 +272,12 @@ header {
 #shortcut {
     display: none;
 }
-.highlight {
+/* .highlight {
     background: hsl(194, 36%, 56%) !important;
 }
 .shortcut-div ul li:last-child {
     border: none;
-}
+} */
 
 kbd {
     border: 1px solid #dbdbdb;

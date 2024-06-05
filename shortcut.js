@@ -262,6 +262,8 @@ document.addEventListener('keydown', function(event) {
 // shortcut //
 const shortcutDiv = document.getElementById('shortcut');
 const searchBox = document.getElementById('searchBox');
+
+
 let isShortcutDivVisible = false;
 
 document.addEventListener('keydown', function(event) {
@@ -297,12 +299,19 @@ document.body.addEventListener('click', function(event) {
 // search-box // 
 
 
+
 document.getElementById('searchBox').addEventListener('keyup', function() {
-    let value = this.value.toLowerCase();
+    let value = this.value.trim().toLowerCase(); 
     let rows = document.querySelectorAll('#table li');
     rows.forEach(function(row) {
         let text = row.textContent.toLowerCase();
-        row.style.display = text.includes(value) ? '' : 'none';
+        if (value === '') { // If search value is empty
+            row.style.display = ''; 
+            row.style.background = ''; 
+        } else { // If search value is not empty
+            row.style.display = text.includes(value) ? '' : 'none';
+            row.style.background = text.includes(value) ? 'hsl(194, 48%, 77%)' : ''; // Set background color only if text matches search value
+        }
     });
 });
 
