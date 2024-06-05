@@ -286,6 +286,13 @@ function toggleShortcutDiv() {
     isShortcutDivVisible = !isShortcutDivVisible; // Toggle the visibility state
 }
 
+document.body.addEventListener('click', function(event) {
+    if (!shortcutDiv.contains(event.target) && event.target !== searchBox) {
+        // Click occurred outside of shortcutDiv and searchBox
+        shortcutDiv.style.display = 'none';
+        isShortcutDivVisible = false;
+    }
+});
 
 // search-box // 
 

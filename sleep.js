@@ -340,8 +340,8 @@
 
 
 
- const sleepTime = [9.20, 9.40, 9.40, 10.00, 10.20,10.20,10.40,9.40,9.30,9.50,9.50,10.30,9.50,9.50,10.00,10.35,10.20,10.50,9.50,10.00];
- const goBedTime = [8.50, 9.20, 9.20, 9.40, 10.40, 9.40,10.00,9.00 ,9.00,9.20,9.30,9.50,9.20,9.10,9.10,10.10,9.35,10.10,9.10,9.13];
+const sleepTime = [9.20, 9.40, 9.40, 10.00, 10.20,10.20,10.40,9.40,9.30,9.50,9.50,10.30,9.50,9.50,10.00,10.35,10.20,10.50,9.50,10.00];
+const goBedTime = [8.50, 9.20, 9.20, 9.40, 10.40, 9.40,10.00,9.00 ,9.00,9.20,9.30,9.50,9.20,9.10,9.10,10.10,9.35,10.10,9.10,9.13];
 
 // Data definitions
 const sleepWeekDayNameLabels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -350,321 +350,321 @@ let sleepDisplay = false; // Changed to lowercase to match usage
 
 // Function to update the chart options and re-render the chart
 function updateSleepCharts() {
-  chartsSleep.forEach(chart => {
-    chart.options.scales.x2.display = sleepDisplay; // Toggle the display property for x2 scale
-    chart.update();
-  });
+ chartsSleep.forEach(chart => {
+   chart.options.scales.x2.display = sleepDisplay; // Toggle the display property for x2 scale
+   chart.update();
+ });
 }
 
 // Function to toggle dataset visibility
 function toggleSleepDatasetVisibility(chart, datasetIndex) {
-  let meta = chart.getDatasetMeta(datasetIndex);
-  meta.hidden = meta.hidden === null ? !chart.data.datasets[datasetIndex].hidden : null;
-  chart.update();
+ let meta = chart.getDatasetMeta(datasetIndex);
+ meta.hidden = meta.hidden === null ? !chart.data.datasets[datasetIndex].hidden : null;
+ chart.update();
 }
 
 // Chart definitions
 const chartSleepConfigs = [
-  {
-    elementId: 'sleep-0',
-    config: {
-        type: 'line',
-        data: {
-          labels: sleepLabelsDate,
-          datasets: [{
-            label: 'sleep',
-            data: sleepTime,
-            borderColor: 'red',
-            backgroundColor: 'rgba(255, 0, 0, 0.5)',
-            yAxisID: 'y',
-          }]
-        },
-        options: {
-          responsive: true,
-          interaction: {
-            mode: 'index',
-            intersect: false,
-          },
-          stacked: false,
-          plugins: {
-            title: {
-              display: false,
-              text: 'sleep 1'
-            }
-          },
-          scales: {
-            x2: {
-              display: sleepDisplay,
-              labels: sleepWeekDayNameLabels
-            },
-            x: {
-              display: true,
-              labels: sleepLabelsDate
-            },
-            y: {
-              type: 'linear',
-              display: true,
-              position: 'left',
-            },
-            y1: {
-              type: 'linear',
-              display: true,
-              position: 'right',
-              grid: {
-                drawOnChartArea: false,
-              },
-            },
-          }
-        }
-      }
-  },
-  {
-    elementId: 'sleep-1',
-    config: {
-      type: 'line',
-      data: {
-        labels: sleepLabelsDate,
-        datasets: [{
-          label: 'sleep',
-          data: sleepTime,
-          borderColor: 'red',
-          backgroundColor: 'rgba(255, 0, 0, 0.5)',
-          yAxisID: 'y',
-        }]
-      },
-      options: {
-        responsive: true,
-        interaction: {
-          mode: 'index',
-          intersect: false,
-        },
-        stacked: false,
-        plugins: {
-          title: {
-            display: false,
-            text: 'sleep 1'
-          }
-        },
-        scales: {
-          x2: {
-            display: sleepDisplay,
-            labels: sleepWeekDayNameLabels
-          },
-          x: {
-            display: true,
-            labels: sleepLabelsDate
-          },
-          y: {
-            type: 'linear',
-            display: true,
-            position: 'left',
-          },
-          y1: {
-            type: 'linear',
-            display: true,
-            position: 'right',
-            grid: {
-              drawOnChartArea: false,
-            },
-          },
-        }
-      }
-    }
-  },
-  {
-    elementId: 'sleep-2',
-    config: {
-      type: 'line',
-      data: {
-        labels: sleepLabelsDate,
-        datasets:[{
-          label: 'sleep',
-          data: sleepTime,
-          borderWidth: 4,
-          backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
-        }]
-      },
-      options: {
-        scales: {
-          x2: {
-            display: sleepDisplay,
-            labels: sleepWeekDayNameLabels
-          },
-          x: {
-            display: true,
-            labels: sleepLabelsDate
-          },
-          y: {
-            beginAtZero: true
-          }
-        },
-        plugins: {
-          legend: {
-            display: true,
-            labels: {
-              fontColor: 'rgb(255, 99, 132)'
-            }
-          }
-        }
-      }
-    }
-  },
-  {
-    elementId: 'sleep-3',
-    config: {
-      type: 'line',
-      data: {
-        labels: sleepLabelsDate ,
-        datasets: [{
-          label: 'sleep',
-          data: sleepTime,
-          borderWidth: 4,
-          backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
-          pointStyle: 'circle',
-          pointRadius: 10,
-          pointHoverRadius: 15
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          title: {
-            display: false,
-          }
-        },
-        scales: {
-          x2: {
-            display: sleepDisplay,
-            labels: sleepWeekDayNameLabels
-          },
-          x: {
-            display: true,
-            labels: sleepLabelsDate
-          },
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    }
-  },
-  {
-    elementId: 'sleep-4',
-    config: {
-      type: 'line',
-      data: {
-        labels: sleepLabelsDate,
-        datasets: [{
-          label: 'sleep',
-          data: sleepTime,
-          borderColor: 'rgb(75, 192, 192)',
-          segment: {
-            borderColor: function(ctx) {
-              return ctx.p0.skip || ctx.p1.skip ? 'rgb(0, 0, 0, 0.2)' : ctx.p0.parsed.y > ctx.p1.parsed.y ? 'rgb(192, 75, 75)' : undefined;
-            },
-            borderDash: function(ctx) {
-              return ctx.p0.skip || ctx.p1.skip ? [6, 6] : undefined;
-            },
-          },
-          spanGaps: true
-        }]
-      },
-      options: {
-        fill: false,
-        interaction: {
-          intersect: false
-        },
-        radius: 0,
-        scales: {
-          x2: {
-            display: sleepDisplay,
-            labels: sleepWeekDayNameLabels
-          },
-          x: {
-            display: true,
-            labels: sleepLabelsDate
-          },
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    }
-  },
-  {
-    elementId: 'sleep-5',
-    config: {
-      type: 'line',
-      data: {
-        labels: sleepLabelsDate,
-        datasets: [{
-          label: 'sleep',
-          data: sleepTime,
-          borderWidth: 4,
-          backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple'],
-          stepped: true,
-          borderColor: '#169788',
-        }]
-      },
-      options: {
-        responsive: true,
-        interaction: {
-          intersect: false,
-          axis: 'x'
-        },
-        plugins: {
-          title: {
-            display: false,
-          }
-        },
-        scales: {
-          x2: {
-            display: sleepDisplay,
-            labels: sleepWeekDayNameLabels
-          },
-          x: {
-            display: true,
-            labels: sleepLabelsDate
-          },
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    }
-  },
-  {
-    elementId: 'sleep-6',
-    config: {
-      type: 'line',
-      data: {
-        labels: sleepLabelsDate,
-        datasets: [{
-          label: 'sleep',
-          backgroundColor: '#8B93FF',
-          borderColor: '#1E0342',
-          data: sleepTime,
-          borderWidth: 2,
-          fill: true,
-        }]
-      },
-      options: {
-        scales: {
-          x2: {
-            display: sleepDisplay,
-            labels: sleepWeekDayNameLabels
-          },
-          x: {
-            display: true,
-            labels: sleepLabelsDate
-          },
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    }
-  }
+ {
+   elementId: 'sleep-0',
+   config: {
+       type: 'line',
+       data: {
+         labels: sleepLabelsDate,
+         datasets: [{
+           label: 'sleep',
+           data: sleepTime,
+           borderColor: 'red',
+           backgroundColor: 'rgba(255, 0, 0, 0.5)',
+           yAxisID: 'y',
+         }]
+       },
+       options: {
+         responsive: true,
+         interaction: {
+           mode: 'index',
+           intersect: false,
+         },
+         stacked: false,
+         plugins: {
+           title: {
+             display: false,
+             text: 'sleep 1'
+           }
+         },
+         scales: {
+           x2: {
+             display: sleepDisplay,
+             labels: sleepWeekDayNameLabels
+           },
+           x: {
+             display: true,
+             labels: sleepLabelsDate
+           },
+           y: {
+             type: 'linear',
+             display: true,
+             position: 'left',
+           },
+           y1: {
+             type: 'linear',
+             display: true,
+             position: 'right',
+             grid: {
+               drawOnChartArea: false,
+             },
+           },
+         }
+       }
+     }
+ },
+ {
+   elementId: 'sleep-1',
+   config: {
+     type: 'line',
+     data: {
+       labels: sleepLabelsDate,
+       datasets: [{
+         label: 'sleep',
+         data: sleepTime,
+         borderColor: 'red',
+         backgroundColor: 'rgba(255, 0, 0, 0.5)',
+         yAxisID: 'y',
+       }]
+     },
+     options: {
+       responsive: true,
+       interaction: {
+         mode: 'index',
+         intersect: false,
+       },
+       stacked: false,
+       plugins: {
+         title: {
+           display: false,
+           text: 'sleep 1'
+         }
+       },
+       scales: {
+         x2: {
+           display: sleepDisplay,
+           labels: sleepWeekDayNameLabels
+         },
+         x: {
+           display: true,
+           labels: sleepLabelsDate
+         },
+         y: {
+           type: 'linear',
+           display: true,
+           position: 'left',
+         },
+         y1: {
+           type: 'linear',
+           display: true,
+           position: 'right',
+           grid: {
+             drawOnChartArea: false,
+           },
+         },
+       }
+     }
+   }
+ },
+ {
+   elementId: 'sleep-2',
+   config: {
+     type: 'line',
+     data: {
+       labels: sleepLabelsDate,
+       datasets:[{
+         label: 'sleep',
+         data: sleepTime,
+         borderWidth: 4,
+         backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
+       }]
+     },
+     options: {
+       scales: {
+         x2: {
+           display: sleepDisplay,
+           labels: sleepWeekDayNameLabels
+         },
+         x: {
+           display: true,
+           labels: sleepLabelsDate
+         },
+         y: {
+           beginAtZero: true
+         }
+       },
+       plugins: {
+         legend: {
+           display: true,
+           labels: {
+             fontColor: 'rgb(255, 99, 132)'
+           }
+         }
+       }
+     }
+   }
+ },
+ {
+   elementId: 'sleep-3',
+   config: {
+     type: 'line',
+     data: {
+       labels: sleepLabelsDate ,
+       datasets: [{
+         label: 'sleep',
+         data: sleepTime,
+         borderWidth: 4,
+         backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
+         pointStyle: 'circle',
+         pointRadius: 10,
+         pointHoverRadius: 15
+       }]
+     },
+     options: {
+       responsive: true,
+       plugins: {
+         title: {
+           display: false,
+         }
+       },
+       scales: {
+         x2: {
+           display: sleepDisplay,
+           labels: sleepWeekDayNameLabels
+         },
+         x: {
+           display: true,
+           labels: sleepLabelsDate
+         },
+         y: {
+           beginAtZero: true
+         }
+       }
+     }
+   }
+ },
+ {
+   elementId: 'sleep-4',
+   config: {
+     type: 'line',
+     data: {
+       labels: sleepLabelsDate,
+       datasets: [{
+         label: 'sleep',
+         data: sleepTime,
+         borderColor: 'rgb(75, 192, 192)',
+         segment: {
+           borderColor: function(ctx) {
+             return ctx.p0.skip || ctx.p1.skip ? 'rgb(0, 0, 0, 0.2)' : ctx.p0.parsed.y > ctx.p1.parsed.y ? 'rgb(192, 75, 75)' : undefined;
+           },
+           borderDash: function(ctx) {
+             return ctx.p0.skip || ctx.p1.skip ? [6, 6] : undefined;
+           },
+         },
+         spanGaps: true
+       }]
+     },
+     options: {
+       fill: false,
+       interaction: {
+         intersect: false
+       },
+       radius: 0,
+       scales: {
+         x2: {
+           display: sleepDisplay,
+           labels: sleepWeekDayNameLabels
+         },
+         x: {
+           display: true,
+           labels: sleepLabelsDate
+         },
+         y: {
+           beginAtZero: true
+         }
+       }
+     }
+   }
+ },
+ {
+   elementId: 'sleep-5',
+   config: {
+     type: 'line',
+     data: {
+       labels: sleepLabelsDate,
+       datasets: [{
+         label: 'sleep',
+         data: sleepTime,
+         borderWidth: 4,
+         backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple'],
+         stepped: true,
+         borderColor: '#169788',
+       }]
+     },
+     options: {
+       responsive: true,
+       interaction: {
+         intersect: false,
+         axis: 'x'
+       },
+       plugins: {
+         title: {
+           display: false,
+         }
+       },
+       scales: {
+         x2: {
+           display: sleepDisplay,
+           labels: sleepWeekDayNameLabels
+         },
+         x: {
+           display: true,
+           labels: sleepLabelsDate
+         },
+         y: {
+           beginAtZero: true
+         }
+       }
+     }
+   }
+ },
+ {
+   elementId: 'sleep-6',
+   config: {
+     type: 'line',
+     data: {
+       labels: sleepLabelsDate,
+       datasets: [{
+         label: 'sleep',
+         backgroundColor: '#8B93FF',
+         borderColor: '#1E0342',
+         data: sleepTime,
+         borderWidth: 2,
+         fill: true,
+       }]
+     },
+     options: {
+       scales: {
+         x2: {
+           display: sleepDisplay,
+           labels: sleepWeekDayNameLabels
+         },
+         x: {
+           display: true,
+           labels: sleepLabelsDate
+         },
+         y: {
+           beginAtZero: true
+         }
+       }
+     }
+   }
+ }
 ];
 
 // Initialize all charts
@@ -672,15 +672,15 @@ const chartsSleep = chartSleepConfigs.map(config => new Chart(document.getElemen
 
 // Event listener to toggle exDisplay when Ctrl + , is pressed
 document.addEventListener('keydown', function(event) {
-  if (event.ctrlKey && event.key === '.') {
-    sleepDisplay = !sleepDisplay;
-    updateSleepCharts();
-  }
+ if (event.ctrlKey && event.key === '.') {
+   sleepDisplay = !sleepDisplay;
+   updateSleepCharts();
+ }
 });
 
 // Event listener to toggle dataset visibility when Ctrl + . is pressed
 document.addEventListener('keydown', function(event) {
-  if (event.ctrlKey && event.key === ',') {
-    chartsSleep.forEach(chart => toggleSleepDatasetVisibility(chart, 0));
-  }
+ if (event.ctrlKey && event.key === ',') {
+   chartsSleep.forEach(chart => toggleSleepDatasetVisibility(chart, 0));
+ }
 });
